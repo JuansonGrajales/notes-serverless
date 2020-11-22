@@ -1,0 +1,13 @@
+Service Information
+service: notes-api
+stage: prod
+region: us-east-1
+stack: notes-api-prod
+resources: 32
+api keys:
+  None
+POST - https://zpa4vlbih7.execute-api.us-east-1.amazonaws.com/prod/notes
+  GET - https://zpa4vlbih7.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  GET - https://zpa4vlbih7.execute-api.us-east-1.amazonaws.com/prod/notes
+  PUT - https://zpa4vlbih7.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  DELETE - https://zpa4vlbih7.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
