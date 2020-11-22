@@ -44,3 +44,12 @@ functions:
       - http:
           path: notes
           method: post
+  # Defines an HTTP API endpoint that calls the main function in get.js
+  # - path: url path is /notes/{id}
+  # - method: GET request
+  get:
+    handler: get.main
+    events:
+      - http:
+          path: notes/{id}
+          method: get
