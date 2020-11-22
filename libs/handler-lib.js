@@ -1,3 +1,4 @@
+// TODO: Why do we need this handler to wrap around our lambda function
 export default function handler(lambda){
     return async function(event, context){
         let body, statusCode;
@@ -7,6 +8,7 @@ export default function handler(lambda){
             body = await lambda(event, context);
             statusCode = 200;
         } catch(e) {
+            console.log(e);
             body = { error: e.message };
             statusCode = 500;
         }

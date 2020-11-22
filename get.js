@@ -1,11 +1,11 @@
 import handler from "./libs/handler-lib";
 import dynamoDb from "./libs/dynamodb-lib";
-
+// TODO: read more of the function and its structure
 export const main = handler(async(event, context) => {
     const params ={
-        TableName: process.env.TableName,
+        TableName: process.env.tableName,
         // 'Key' defines the partition key and sort key of the item to be retrieved
-        key: {
+        Key: {
             userId: "123", // The id of the author
             noteId: event.pathParameters.id, // The id of the note from the path
         },
